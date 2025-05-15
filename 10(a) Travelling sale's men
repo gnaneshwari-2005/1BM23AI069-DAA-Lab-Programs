@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <limits.h>
+#define MAX 10
+int dist[MAX][MAX]; 
+int visited[MAX];    
+int n;               
+int minCost = INT_MAX; 
+int calculateCost(int path[]) {
+    int cost = 0;
+    for (int i = 0; i < n - 1; i++) {
+        cost += dist[path[i]][path[i + 1]];
+    }
+    cost += dist[path[n - 1]][path[0]]; 
+    return cost;
+}
+void tsp(int path[], int cityIndex) {
+    if (cityIndex == n) {
+        int cost = calculateCost(path);
+        if (cost < minCost) {
+            minCost = cost;
+        }
+        return;
+    }
+    for (int i = cityIndex; i < n; i++) {
+        int temp = path[i];
+        path[i] = path[cityIndex];
+        path[cityIndex] = temp;
+
+        tsp(path, cityIndex + 1);
+        temp = path[i];
+        path[i] = path[cityIndex];
+        path[cityIndex] = temp;
+    }
+}
+int main() {
+    printf("Enter the number of cities: ");
+    scanf("%d", &n);
+
+    printf("Enter the distance matrix (0 for no path between cities):\n");
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &dist[i][j]);
+        }
+    }
+    int path[MAX];
+    for (int i = 0; i < n; i++) {
+        path[i] = i;
+    }
+    tsp(path, 0);
+    printf("Minimum cost of traveling all cities: %d\n", minCost);
+    return 0;
+}
