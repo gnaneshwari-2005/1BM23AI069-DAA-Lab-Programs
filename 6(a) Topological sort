@@ -12,7 +12,7 @@ void dfs(int v, int n) {
         if (graph[v][i] && !visited[i])
             dfs(i, n);
     }
-    stack[++top] = v; // push to stack after visiting all adjacent
+    stack[++top] = v; 
 }
 int main() {
     int n, e, u, v;
@@ -38,3 +38,14 @@ int main() {
         printf("%d ", stack[top--]);
     return 0;
 }
+
+OUTPUT:
+Enter number of vertices: 4
+Enter number of edges: 3
+Enter edge 1 (from to): 0 1
+Enter edge 2 (from to): 1 2
+Enter edge 3 (from to): 2 3
+
+
+Topological Sort Order:
+0 1 2 3
