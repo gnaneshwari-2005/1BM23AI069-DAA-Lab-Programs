@@ -42,3 +42,11 @@ int main() {
 
     return 0;
 }
+
+OUTPUT:
+Enter number of elements: 5
+Enter 5 elements:
+21 33 67 45 89
+Sorted array: 21 33 45 67 89 
+
+=== Code Execution Successful ===
