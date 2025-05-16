@@ -30,3 +30,11 @@ int main() {
 
     return 0;
 }
+
+OUTPUT:
+Enter text: HELLOJAANU
+Enter pattern: JAAN
+Pattern found at index 5
+
+
+=== Code Execution Successful ===
