@@ -46,3 +46,11 @@ int main() {
 
     return 0;
 }
+
+OUTPUT:
+Enter number of elements: 6
+Enter 6 elements:
+12 23 21 54 45 76 676
+Sorted array: 12 21 23 45 54 76 
+
+=== Code Execution Successful ===
