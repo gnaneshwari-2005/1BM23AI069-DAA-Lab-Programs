@@ -65,3 +65,10 @@ int main() {
     }
     return 0;
 }
+OUTPUT:
+Enter the number of queens: 4
+Solution to the N-Queens problem:
+. Q . . 
+. . . Q 
+Q . . . 
+. . Q . 
