@@ -39,3 +39,13 @@ int main() {
 
     return 0;
 }
+
+OUTPUT:
+Enter number of elements: 4
+Enter 4 elements:
+89 95 43 21
+Original array: 89 95 43 21 
+Sorted array using Selection Sort: 21 43 89 95 
+
+
+=== Code Execution Successful ===
