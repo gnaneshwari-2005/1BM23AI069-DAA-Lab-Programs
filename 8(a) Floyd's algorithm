@@ -46,3 +46,17 @@ int main() {
     floydWarshall(graph, n);
     return 0;
 }
+
+OUTPUT:
+4
+4
+0 1 3
+0 2 5
+1 2 1
+2 3 2
+
+Shortest distances between every pair of vertices:
+0 3 4 6 
+99999 0 1 3 
+99999 99999 0 2 
+99999 99999 99999 0 
