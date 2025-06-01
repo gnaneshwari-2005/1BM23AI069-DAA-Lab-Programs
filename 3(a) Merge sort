@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-void merge(int a[], int l, int m, int r) {
+void merge(int a[], int 1, int m, int r) {
     int i = l, j = m + 1, k = 0;
     int temp[r - l + 1];
 
